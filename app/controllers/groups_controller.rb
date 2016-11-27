@@ -7,6 +7,13 @@ def new
   @group = Group.new
   end
 
+def new
+  @group = Group.find(params[:id])
+end
+
+def show
+  @group = Group.find(params[:id])
+end
 
 def create
   @group = Group.new(group_params)
